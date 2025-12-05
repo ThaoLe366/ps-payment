@@ -1,3 +1,4 @@
+
 export enum PaymentMethod  {
     BankTransfer= "bank_transfer",
     Cash = "cash"
@@ -7,6 +8,11 @@ export enum PaymentStatus {
     InProgress = "in-progress",
     Done = "done",
     Cancel = "cancel"
+}
+export enum UnappliedPaymentStatus {
+    Refund = "refund",
+    Spending = "spending",
+    Applied = "applied"
 }
 export interface Invoice {
     id: string;
@@ -59,6 +65,15 @@ export interface ReceiptItem {
     taxAmount: number;
 }
 
+export interface UnknownPayment {
+    id: string;
+    invoiceId: string;
+    paymentMethod: PaymentMethod;
+    amount: number;
+    paymentDate: Date;
+    referenceNumber: string;
+    status: UnappliedPaymentStatus;
+}
 
 
 // interface PaymentMethod {

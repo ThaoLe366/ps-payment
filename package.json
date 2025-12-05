@@ -10,12 +10,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/events": "^3.0.3",
     "@types/joi": "^17.2.3",
     "@types/node": "^24.10.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   },
   "dependencies": {
+    "events": "^3.3.0",
     "joi": "^18.0.2"
   }
 }

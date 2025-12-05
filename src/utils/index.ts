@@ -29,6 +29,11 @@ export const generateReceiptId = () : string => {
     return `ReceiptId_${mReceiptId++}`;
 }
 
+var mUnknownPaymentId = 0;
+export const generateUnknownPaymentId = () : string => {
+    return `UnknownPayment_${mReceiptId++}`;
+}
+
 export const printShortInfo = (data: any) => {
     if (null == data) {
         return data;

@@ -1,7 +1,6 @@
-import { Invoice, InvoiceItem, Payment, Receipt } from '../types';
 
 // Generic repo
-class DbRepo<T extends { id: string }> {
+export class DbRepo<T extends { id: string }> {
   private data: T[] = [];
 
   constructor(initialData: T[] = []) {
@@ -34,8 +33,3 @@ class DbRepo<T extends { id: string }> {
     };
   }
 }
-// Fake for db
-export const dbInvoice = new DbRepo<Invoice>();
-export const dbInvoiceItem = new DbRepo<InvoiceItem>();
-export const dbPayment = new DbRepo<Payment>();
-export const dbReceive = new DbRepo<Receipt>();
